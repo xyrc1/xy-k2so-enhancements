@@ -10,6 +10,14 @@ data:extend({
     },]]
     {
         type = 'bool-setting',
+        name = 'xy-hydro-plant-runs-fuel-ref-recipes',
+        setting_type = 'startup',
+        default_value = true,
+
+        localised_name = {'mod-setting-name.xy-hydro-plant-runs-fuel-ref-recipes'},
+    },
+    {
+        type = 'bool-setting',
         name = 'xy-paracelsin-tech-card',
         setting_type = 'startup',
         default_value = true,

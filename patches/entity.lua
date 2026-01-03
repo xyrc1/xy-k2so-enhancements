@@ -34,3 +34,7 @@ if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] 
         {type = 'item', name = 'kr-advanced-chemical-plant', amount = 1},
     }
 end
+
+if settings.startup['xy-hydro-plant-runs-fuel-ref-recipes'].value and mods['maraxsis'] then
+    table.insert(data.raw['assembling-machine']['maraxsis-hydro-plant'].crafting_categories, 'kr-fuel-refinery')
+end
