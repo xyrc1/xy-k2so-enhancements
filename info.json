@@ -1,0 +1,22 @@
+{
+  "name": "xy-k2so-enhancements",
+  "factorio_version" : "2.0",
+  "version": "0.1.0",
+  "title": "xyrc's K2SO Enhancements",
+  "author": "xyrc",
+  "homepage": "https://github.com/xyrc1/xy-k2so-enhancements",
+  "contact": "Discord: xyrc",
+  "dependencies": [
+    "base >= 2.0.72", 
+    "Krastorio2-spaced-out >= 1.6.1",
+    "Moshine >= 1.1.0",
+    "? nulls-k2so-tweaks",
+    "? planet-muluna",
+    "? maraxsis",
+    "? Paracelsin",
+    "? se-space-trains",
+    "? science-tab"
+  ],
+  "space_travel_required": true,
+  "description": "Laundry list of tweaks, fixes, and overall enhancements to Krastorio 2 Spaced Out for compatability with other mods, consistency changes, and balancing. Adds sprited galvanization tech cards to Paracelsin. Patches vehicles added by other mods to work with K2's equipment system. Patches can be toggled in settings."
+}
