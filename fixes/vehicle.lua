@@ -9,9 +9,9 @@ if mods['planet-muluna'] then
     -- Fix the rocket launcher stats to the same as the K2 Spidertron
     data.raw['gun']['muluna-rocket-buggy-rocket-launcher'].attack_parameters.cooldown = 90
     data.raw['gun']['muluna-rocket-buggy-rocket-launcher'].attack_parameters.range = 40
-    -- Use Krastorio fuels and reduce power consumption to be more resonable
+    -- Use Krastorio fuels and add pollution consumption
     data.raw['car']['muluna-rocket-buggy'].energy_source.fuel_categories = {'kr-vehicle-fuel'}
-    data.raw['car']['muluna-rocket-buggy'].energy_source.emissions_per_minute = {pollution = 5}
+    data.raw['car']['muluna-rocket-buggy'].energy_source.emissions_per_minute = {pollution = 12.5}
 end
 -- Patch SE space trains overall to mirror the K2 adjusted Locomotive and give equipment grid; slightly reduced weight since no engines and stuff
 if mods['se-space-trains'] then

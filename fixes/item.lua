@@ -1,4 +1,4 @@
-data.extend({ -- add card
+data.extend({ 
         {
             type = 'item',
             name = 'xy-galvanization-research-data',
