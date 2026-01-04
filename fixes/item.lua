@@ -40,7 +40,7 @@ if mods['Paracelsin'] then
         }
     })
 end
---[[if mods['secretas'] then
+if mods['secretas'] then
     data.extend({ 
         {
             type = 'item',
@@ -82,7 +82,7 @@ end
             localised_name = {'item-name.xy-golden-research-data'}
         }
     })
-end]]
+end
 
 if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
     local gsp_recipe = data.raw['recipe']['galvanization-science-pack']
@@ -116,5 +116,38 @@ if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
     table.insert(gsp_research.effects, {
         type = 'unlock-recipe',
         recipe = 'xy-galvanization-research-data',
+    })
+end
+
+if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
+    local t = data.raw['recipe']['golden-science-pack']
+
+    t.energy_required = 20
+    t.category = 'kr-tech-cards'
+    t.surface_conditions = nil
+    t.ingredients = {
+        {type = 'item', name = 'kr-blank-tech-card', amount = 5},
+        {type = 'item', name = 'xy-golden-research-data', amount = 5},
+    }
+    t.results = {
+        {type = 'item', name = 'golden-science-pack', amount = 5},
+    }
+
+    t.always_show_products = true
+    t.show_amount_in_title = false
+    t.localised_name = {'item-name.xy-golden-tech-card'}
+    t.icon = '__xy-k2so-enhancements__/icons/golden-tech-card.png'
+
+    -- change the science pack name and icon to the right assets
+    data.raw['tool']['golden-science-pack'].localised_name = {'item-name.xy-golden-tech-card'}
+    data.raw['tool']['golden-science-pack'].icon = '__xy-k2so-enhancements__/icons/golden-tech-card.png'
+
+    -- add to research and change assets
+    data.raw['technology']['golden-science-pack'].icon = '__xy-k2so-enhancements__/icons/golden-tech-card-research.png'
+    data.raw['technology']['golden-science-pack'].localised_name = {'item-name.xy-golden-tech-card'}
+    
+    table.insert(data.raw['technology']['golden-science-pack'].effects, {
+        type = 'unlock-recipe',
+        recipe = 'xy-golden-research-data',
     })
 end

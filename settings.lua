@@ -18,7 +18,6 @@ data:extend({
         order = '1-parac',
 
         localised_name = {'mod-setting-name.xy-paracelsin-tech-card'},
-        localised_description = {'mod-setting-description.xy-paracelsin-tech-card'},
     },
     {
         type = 'bool-setting',
@@ -30,6 +29,16 @@ data:extend({
 
         localised_name = {'mod-setting-name.xy-paracelsin-tech-card-endgame'},
         localised_description = {'mod-setting-description.xy-paracelsin-tech-card-endgame'},
+    },
+    {
+        type = 'bool-setting',
+        name = 'xy-secretas-tech-card',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = '1-secre',
+
+        localised_name = {'mod-setting-name.xy-secretas-tech-card'},
     },
     {
         type = 'bool-setting',
