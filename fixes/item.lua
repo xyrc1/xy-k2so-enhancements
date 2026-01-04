@@ -143,6 +143,7 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     data.raw['tool']['golden-science-pack'].icon = '__xy-k2so-enhancements__/icons/golden-tech-card.png'
 
     -- add to research and change assets
+    data.raw['technology']['golden-science-pack'].icons = nil
     data.raw['technology']['golden-science-pack'].icon = '__xy-k2so-enhancements__/icons/golden-tech-card-research.png'
     data.raw['technology']['golden-science-pack'].localised_name = {'item-name.xy-golden-tech-card'}
     
