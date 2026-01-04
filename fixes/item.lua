@@ -1,4 +1,5 @@
-data.extend({ 
+if mods['Paracelsin'] then
+    data.extend({ 
         {
             type = 'item',
             name = 'xy-galvanization-research-data',
@@ -38,6 +39,10 @@ data.extend({
             localised_name = {'item-name.xy-galvanization-research-data'}
         }
     })
+end
+if mods['secretas'] then
+
+end
 
 if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
     local gsp_recipe = data.raw['recipe']['galvanization-science-pack']
