@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 01-04-2026
+  Bugfixes:
+    - Fixed crash when processing unit alt recipes were enabled and Cerys was not enabled
+    - Fixed Paracelsin processing unit from nitric acid recipe giving one instead of two processing units
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 01-04-2026
   Bugfixes:
