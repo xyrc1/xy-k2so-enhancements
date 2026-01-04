@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 01-04-2026
+  Bugfixes:
+    - Fixed Muluna not being installed causing crash on load (again)
+  Features:
+    - (Secretas) Added sprited auric tech card and auric research data, replacing the golden science pack
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 01-04-2026
   Bugfixes:

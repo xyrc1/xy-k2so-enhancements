@@ -36,6 +36,8 @@ All settings in this category can be enabled or disabled in the mod settings!
   - Adv. chemical plants are slightly cheaper overall to craft, crafting speed and bonus productivity halved (to 4x and +25%), energy usage slightly reduced, 10 can be shipped per rocket instead of 5
   - Electrochemical plants have quadruple the crafting speed and bonus productivity (to 8x and +50%), energy usage increased
   - Adv. chemical plants require two chemical plants to craft, and the electrochemical plant requires one adv. chemical plant
+### Secretas & Frozeta
+- Adds "new" auric tech card, replacing the golden science pack, as well as auric research data
 ### Moshine
 - Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
 ### Maraxsis
