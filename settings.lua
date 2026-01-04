@@ -1,18 +1,11 @@
 data:extend({
-    --[[{
-        type = 'bool-setting',
-        name = 'xy-SAMPLE',
-        setting_type = 'startup',
-        default_value = true,
-
-        localised_name = {'mod-setting-name.xy-SAMPLE'},
-        localised_description = {'mod-setting-description.xy-SASMPLE'},
-    },]]
     {
         type = 'bool-setting',
         name = 'xy-hydro-plant-runs-fuel-ref-recipes',
         setting_type = 'startup',
         default_value = true,
+
+        order = 'marax-a',
 
         localised_name = {'mod-setting-name.xy-hydro-plant-runs-fuel-ref-recipes'},
     },
@@ -21,6 +14,8 @@ data:extend({
         name = 'xy-paracelsin-tech-card',
         setting_type = 'startup',
         default_value = true,
+
+        order = '1-parac',
 
         localised_name = {'mod-setting-name.xy-paracelsin-tech-card'},
         localised_description = {'mod-setting-description.xy-paracelsin-tech-card'},
@@ -31,6 +26,8 @@ data:extend({
         setting_type = 'startup',
         default_value = true,
 
+        order = 'parac-a',
+
         localised_name = {'mod-setting-name.xy-paracelsin-tech-card-endgame'},
         localised_description = {'mod-setting-description.xy-paracelsin-tech-card-endgame'},
     },
@@ -39,6 +36,8 @@ data:extend({
         name = 'xy-lab-recipe-changes',
         setting_type = 'startup',
         default_value = true,
+
+        order = 'x-a',
 
         localised_name = {'mod-setting-name.xy-lab-recipe-changes'},
         localised_description = {'mod-setting-description.xy-lab-recipe-changes'},
@@ -49,6 +48,8 @@ data:extend({
         setting_type = 'startup',
         default_value = true,
 
+        order = 'x-b',
+
         localised_name = {'mod-setting-name.xy-item-weight'},
         localised_description = {'mod-setting-description.xy-item-weight'},
     },
@@ -57,6 +58,8 @@ data:extend({
         name = 'xy-move-lab-category',
         setting_type = 'startup',
         default_value = true,
+
+        order = 'x-x',
 
         localised_name = {'mod-setting-name.xy-move-lab-category'},
         localised_description = {'mod-setting-description.xy-move-lab-category'},
@@ -67,6 +70,8 @@ data:extend({
         setting_type = 'startup',
         default_value = true,
 
+        order = 'mosh-a',
+
         localised_name = {'mod-setting-name.xy-moshine-connection-length'},
         localised_description = {'mod-setting-description.xy-moshine-connection-length'},
     },
@@ -76,6 +81,8 @@ data:extend({
         setting_type = 'startup',
         default_value = true,
 
+        order = 'x-d',
+
         localised_name = {'mod-setting-name.xy-processing-unit-alt'},
         localised_description = {'mod-setting-description.xy-processing-unit-alt'},
     },
@@ -84,6 +91,8 @@ data:extend({
         name = 'xy-adv-chem-plant-rebalance',
         setting_type = 'startup',
         default_value = true,
+
+        order = 'parac-b',
 
         localised_name = {'mod-setting-name.xy-adv-chem-plant-rebalance'},
         localised_description = {'mod-setting-description.xy-adv-chem-plant-rebalance'},
@@ -95,6 +104,8 @@ data:extend({
         setting_type = 'startup',
         default_value = false,
 
+        order = 'marax-b',
+
         localised_name = {'mod-setting-name.xy-maraxsis-moshine-connection'},
         localised_description = {'mod-setting-description.xy-maraxsis-moshine-connection'},
     },
@@ -103,6 +114,8 @@ data:extend({
         name = 'xy-advanced-tank-expensive-research',
         setting_type = 'startup',
         default_value = false,
+
+        order = 'y-c',
 
         localised_name = {'mod-setting-name.xy-advanced-tank-expensive-research'},
         localised_description = {'mod-setting-description.xy-advanced-tank-expensive-research'},
@@ -113,6 +126,8 @@ data:extend({
         setting_type = 'startup',
         default_value = false,
 
+        order = 'x-e',
+
         localised_name = {'mod-setting-name.xy-spidertron-fish'},
     },
     {
@@ -121,7 +136,21 @@ data:extend({
         setting_type = 'startup',
         default_value = false,
 
+        order = 'y-a',
+
         localised_name = {'mod-setting-name.xy-tech-inflation'},
         localised_description = {'mod-setting-description.xy-tech-inflation'},
+    },
+    {
+        type = 'string-setting',
+        name = 'xy-tech-inflation-scale',
+        setting_type = 'startup',
+        default_value = '100%',
+        allowed_values = {'50%','75%','100%'},
+
+        order = 'y-b',
+
+        localised_name = {'mod-setting-name.xy-tech-inflation-scale'},
+        localised_description = {'mod-setting-description.xy-tech-inflation-scale'},
     },
 })

@@ -32,6 +32,7 @@ if settings.startup['xy-tech-inflation'].value then
     -- increase the cost of all mid-late-endgame techs, starting after the first three vanilla planets
     -- does not affect Moshine as that is unrelated
 
+    local settings_post_multi = 1 -- worst var name ever
     local hardcoded_multi = { -- overrides the sweeping changes
         ['planet-discovery-aquilo'] = 8,
         ['planet-discovery-maraxsis'] = 8,
@@ -49,18 +50,26 @@ if settings.startup['xy-tech-inflation'].value then
         ['golden-science-pack'] = 20,
         ['kr-singularity-tech-card'] = 15,
         ['kr-matter-tech-card'] = 10,
-        ['cryogenic-science-pack'] = 7,
-        ['galvanization-science-pack'] = 7,
-        ['hydraulic-science-pack'] = 7,
+        ['cryogenic-science-pack'] = 6,
+        ['galvanization-science-pack'] = 6,
+        ['hydraulic-science-pack'] = 6,
         ['kr-advanced-tech-card'] = 2,
         ['MAE-cards'] = 5,
     }
+    if settings.startup['xy-tech-inflation-scale'].value ~= '100%' then -- dumb but it works so whatever
+        if settings.startup['xy-tech-inflation-scale'].value == '50%' then
+            settings_post_multi = .5
+        elseif settings.startup['xy-tech-inflation-scale'].value == '75%' then
+            settings_post_multi = .75
+        end
+    end
+
 
     for _,tech in pairs(t) do
         if (tech.upgrade) or (not tech.unit) or (not tech.unit.count) then goto continue end
 
         if hardcoded_multi[tech.name] then
-            tech.unit.count = tech.unit.count * hardcoded_multi[tech.name]
+            tech.unit.count = math.ceil(tech.unit.count * hardcoded_multi[tech.name] * settings_post_multi)
         else
             -- general application
             local used_cards = {}
@@ -81,8 +90,9 @@ if settings.startup['xy-tech-inflation'].value then
             if highest_multi == 1 and MAE == 3 then
                 highest_multi = general_multi['MAE-cards']
             end
-
-            tech.unit.count = tech.unit.count * highest_multi
+            if highest_multi ~= 1 then
+                tech.unit.count = math.ceil(tech.unit.count * highest_multi * settings_post_multi)
+            end
         end
 
         ::continue::
