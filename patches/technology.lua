@@ -15,7 +15,7 @@ if settings.startup['xy-paracelsin-tech-card'].value then
         table.insert(t['kr-intergalactic-transceiver'].unit.ingredients, {'galvanization-science-pack', 1})
     end
 
-    if settings.startup['xy-lab-recipe-changes'].value then
+    if settings.startup['xy-lab-recipe-changes'].value and mods['planet-muluna'] then
         table.insert(t['cryolab'].unit.ingredients, {'galvanization-science-pack', 1})
     end
 end
