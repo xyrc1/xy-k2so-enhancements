@@ -13,3 +13,9 @@ if settings.startup['xy-paracelsin-tech-card'].value then
     end
 end
 
+if settings.startup['xy-advanced-tank-expensive-research'].value then
+    t['kr-advanced-tank'].unit.count = 2500
+    table.insert(t['kr-advanced-tank'].unit.ingredients, {'metallurgic-science-pack', 1})
+    table.insert(t['kr-advanced-tank'].unit.ingredients, {'electromagnetic-science-pack', 1})
+    table.insert(t['kr-advanced-tank'].unit.ingredients, {'agricultural-science-pack', 1})
+end

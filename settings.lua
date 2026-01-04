@@ -98,4 +98,13 @@ data:extend({
         localised_name = {'mod-setting-name.xy-maraxsis-moshine-connection'},
         localised_description = {'mod-setting-description.xy-maraxsis-moshine-connection'},
     },
+    {
+        type = 'bool-setting',
+        name = 'xy-advanced-tank-expensive-research',
+        setting_type = 'startup',
+        default_value = false,
+
+        localised_name = {'mod-setting-name.xy-advanced-tank-expensive-research'},
+        localised_description = {'mod-setting-description.xy-advanced-tank-expensive-research'},
+    },
 })
