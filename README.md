@@ -31,13 +31,15 @@ Most changes done by this mod can be toggled in the mod settings on startup, tho
   - Adv. chemical plants are slightly cheaper overall to craft, crafting speed and bonus productivity halved (to 4x and +25%), energy usage slightly reduced, 10 can be shipped per rocket instead of 5
   - Electrochemical plants have quadruple the crafting speed and bonus productivity (to 8x and +50%), energy usage increased
   - Adv. chemical plants require two chemical plants to craft, and the electrochemical plant requires one adv. chemical plant
+### Moshine
+- Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
+- Add a connection from Moshine to Maraxsis which is 15000 km long
+### Maraxsis
+- Hydro plant can run fuel refinery recipes; this may put the cryo plant out of a job
 ### Lab changes
 - Move all lab buildings to the science category if the [Science group](https://mods.factorio.com/mod/science-tab) mod is installed without needing to meet the ten lab requirement
 - The singularity lab requires Muluna's cryolab instead of biolabs in its recipe. If Muluna isn't installed, quantum processors will be added to its recipe instead in order to require more Space Age materials (outside of Gleba)
 - If Paracelsin is installed, Muluna's cryolab requires galvanization tech cards (if enabled) and requires electric coils among other changes in its recipe
 - Biolabs rocket capacity increased from 1 to 5
-### Moshine
-- Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
-- Add a connection from Moshine to Maraxsis which is 15000 km long
 ***
 Credits to Krastorio 2 as research data and tech card sprites were edited to create the assets in this mod.
