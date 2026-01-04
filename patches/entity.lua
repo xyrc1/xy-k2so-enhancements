@@ -1,3 +1,12 @@
+-- always
+-- buff tesla weapons since theyre untouched by K2 and are therefore powercrept
+-- if theres power creep its easier to just keep going with it than to stop it
+-- if the player is interested in challenges, armored biters or other mods are always a "fun" option
+data.raw['electric-turret']['tesla-turret'].attack_parameters.range = 40 -- from 30; this falls out of line with the other range buffs but wtv
+data.raw['electric-turret']['tesla-turret'].attack_parameters.cooldown = 100 -- from 120
+data.raw['electric-turret']['tesla-turret'].energy_source.drain = '500kW' -- from 1 mw
+data.raw['electric-turret']['tesla-turret'].energy_source.input_flow_limit = '7.7MW' -- from 7 mw
+
 if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] then
     local acp = data.raw['assembling-machine']['kr-advanced-chemical-plant']
     local ep = data.raw['assembling-machine']['electrochemical-plant']

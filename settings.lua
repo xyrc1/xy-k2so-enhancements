@@ -115,4 +115,13 @@ data:extend({
 
         localised_name = {'mod-setting-name.xy-spidertron-fish'},
     },
+    {
+        type = 'bool-setting',
+        name = 'xy-tech-inflation',
+        setting_type = 'startup',
+        default_value = false,
+
+        localised_name = {'mod-setting-name.xy-tech-inflation'},
+        localised_description = {'mod-setting-description.xy-tech-inflation'},
+    },
 })
