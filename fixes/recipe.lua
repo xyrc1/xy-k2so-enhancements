@@ -71,7 +71,7 @@ if settings.startup['xy-processing-unit-alt'].value then
             {type = 'item', name = 'advanced-circuit', amount = 5},
             {type = 'fluid', name = 'nitric-acid', amount = 10},
         }
-        data.raw['recipe']['cerys-processing-units-from-nitric-acid'].results = {
+        data.raw['recipe']['paracelsin-processing-units-from-nitric-acid'].results = {
             {type = 'item', name = 'processing-unit', amount = 2},
         }
     end
