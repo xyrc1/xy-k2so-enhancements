@@ -50,6 +50,9 @@ if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
         table.insert(t['cryolab'].unit.ingredients, {'galvanization-science-pack', 1})
     end
 end
+if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] then
+    add_preqs('planet-discovery-paracelsin', {'kr-advanced-chemical-plant'})
+end
 
 if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     -- Logical progression
@@ -103,7 +106,7 @@ if settings.startup['xy-advanced-tank-expensive-research'].value then
     table.insert(t['kr-advanced-tank'].unit.ingredients, {'electromagnetic-science-pack', 1})
     add_preqs('kr-advanced-tank', {'metallurgic-science-pack','agricultural-science-pack','electromagnetic-science-pack'})
 end
----
+----- MLE Tech Scaling -----
 if settings.startup['xy-tech-inflation'].value then
     -- increase the cost of all mid-late-endgame techs, starting after the first three vanilla planets
     -- does not affect Moshine as that is unrelated
