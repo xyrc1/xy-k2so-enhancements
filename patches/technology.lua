@@ -67,7 +67,7 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
         'spaceship-scrap-recycling-productivity',
         'transport-belt-capacity-3-Secretas',
     }
-    if(settings.startup["condense-level-4-modules-into-one-technology"].value) then
+    if settings.startup['condense-level-4-modules-into-one-technology'].value then
         table.insert(requires_auric, 'module-finale')
     else
         table.insert(requires_auric, 'efficiency-module-4-S')
@@ -84,11 +84,13 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     remove_cards('gold-heat-pipe', {'automation-science-pack', 'logistic-science-pack', 'chemical-science-pack'}) -- redundant cards at this point
     remove_preqs('planet-discovery-secretas', {'cryogenic-science-pack'})
     add_preqs('planet-discovery-secretas', {'railgun'})
-    add_preqs('efficiency-module-4-S',   {'efficiency-module-3'})
-    add_preqs('productivity-module-4-S', {'productivity-module-3'})
-    add_preqs('quality-module-4-S',      {'quality-module-3'})
-    add_preqs('speed-module-4-S',        {'speed-module-3'})
-
+    if settings.startup['condense-level-4-modules-into-one-technology'].value then
+        add_preqs('efficiency-module-4-S',   {'efficiency-module-3'})
+        add_preqs('productivity-module-4-S', {'productivity-module-3'})
+        add_preqs('quality-module-4-S',      {'quality-module-3'})
+        add_preqs('speed-module-4-S',        {'speed-module-3'})
+    end
+    
     if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
         table.insert(t['planet-discovery-secretas'].unit.ingredients, {'galvanization-science-pack', 1})
     end

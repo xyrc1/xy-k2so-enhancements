@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 01-04-2026
+  Minor Features:
+    - Add more support for Secretas
+      - Tech prerequsites are in the correct order instead of all being grouped in front of Secretas discovery
+      - Module 4's require the respective Module 3 tech
+      - A few recipes changed to be less random and integrate K2 and Paracelsin materials
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 01-04-2026
   Bugfixes:
