@@ -78,6 +78,16 @@ data:extend({
         localised_name = {'mod-setting-name.xy-adv-chem-plant-rebalance'},
         localised_description = {'mod-setting-description.xy-adv-chem-plant-rebalance'},
     },
+    {
+        type = 'bool-setting',
+        name = 'xy-mechanical-plant-more-recipes',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = 'parac-c',
+
+        localised_name = {'mod-setting-name.xy-mechanical-plant-more-recipes'},
+    },
     --- Secretas
     {
         type = 'bool-setting',

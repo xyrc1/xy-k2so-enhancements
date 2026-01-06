@@ -81,6 +81,51 @@ if settings.startup['xy-spidertron-fish'].value then
     table.insert(data.raw.recipe['spidertron'].ingredients, {type = 'item', name = 'raw-fish', amount = 1})
 end
 
+if settings.startup['xy-mechanical-plant-more-recipes'].value then
+    local recipes = {
+        -- consistency
+        'kr-superior-transport-belt',
+        'kr-superior-underground-belt',
+        'kr-superior-splitter',
+        'kr-superior-loader',
+        'kr-superior-inserter',
+        'kr-superior-long-inserter',
+        'hyper-inserter',
+        'cerys-radiation-proof-inserter',
+        'kr-steel-pipe',
+        'kr-steel-pipe-to-ground',
+        'kr-steel-pump',
+        'kr-big-storage-tank',
+        'kr-huge-storage-tank',
+        'pumpjack',
+        'rail-minmal',
+        'rail-ramp-minimal',
+        -- actually helpful
+        'kr-inserter-parts',
+        'centrifuge',
+        'electric-mining-drill',
+        'kr-electric-mining-drill-mk2',
+        'crusher',
+        'muluna-steam-crusher',
+        'crusher-2',
+        'kr-crusher',
+        'steam-engine',
+        'steam-turbine',
+        'kr-advanced-steam-turbine',
+        'asteroid-collector',
+        'thruster',
+    }
+    for _,r in pairs(recipes) do
+        if data.raw['recipe'][r] then
+            if data.raw['recipe'][r].additional_categories then
+                table.insert(data.raw['recipe'][r].additional_categories, 'mechanics')
+            else
+                data.raw['recipe'][r].additional_categories = {'mechanics'}
+            end
+        end
+    end
+end
+
 if settings.startup['xy-secretas-polish'].value and mods['secretas'] then
     data.raw.recipe['speed-module-4-S'].ingredients = {
         {type = 'item', name = 'gold-plate', amount = 5},
