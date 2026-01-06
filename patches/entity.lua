@@ -38,6 +38,8 @@ if settings.startup['xy-adv-chem-plant-rebalance'].value and mods['Paracelsin'] 
     ep.energy_source.emissions_per_minute.pollution = 35
     ep.energy_source.drain = '160kW'
     ep.effect_receiver.base_effect.productivity = .5
+    table.insert(ep.crafting_categories, 'kr-advanced-chemistry')
+    table.insert(ep.crafting_categories, 'kr-fluid-filtration')
 
     data.raw.recipe['electrochemical-plant'].ingredients = {
         {type = 'item', name = 'copper-cable', amount = 25},
