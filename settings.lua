@@ -93,23 +93,11 @@ data:extend({
     --- General - Technology ---
     {
         type = 'bool-setting',
-        name = 'xy-advanced-tank-expensive-research',
-        setting_type = 'startup',
-        default_value = false,
-
-        order = 'x-a-tech-0',
-
-        localised_name = {'mod-setting-name.xy-advanced-tank-expensive-research'},
-        localised_description = {'mod-setting-description.xy-advanced-tank-expensive-research'},
-    },
-    
-    {
-        type = 'bool-setting',
         name = 'xy-tech-inflation',
         setting_type = 'startup',
         default_value = false,
 
-        order = 'x-a-tech-1',
+        order = 'x-a-tech-0',
 
         localised_name = {'mod-setting-name.xy-tech-inflation'},
         localised_description = {'mod-setting-description.xy-tech-inflation'},
@@ -121,10 +109,21 @@ data:extend({
         default_value = '100%',
         allowed_values = {'25%','50%','75%','100%','150%','200%'},
 
-        order = 'x-a-tech-a',
+        order = 'x-a-tech-1',
 
         localised_name = {'mod-setting-name.xy-tech-inflation-scale'},
         localised_description = {'mod-setting-description.xy-tech-inflation-scale'},
+    },
+    {
+        type = 'bool-setting',
+        name = 'xy-advanced-tank-expensive-research',
+        setting_type = 'startup',
+        default_value = false,
+
+        order = 'x-a-tech-a',
+
+        localised_name = {'mod-setting-name.xy-advanced-tank-expensive-research'},
+        localised_description = {'mod-setting-description.xy-advanced-tank-expensive-research'},
     },
     --- General - Recipes
     {
