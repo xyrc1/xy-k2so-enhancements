@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 01-06-2026
+  Minor Features:
+    - (Paracelsin) New setting: Mechanical Plant can now run more recipes
+      - Default on
+      - Includes inserters from other mods, superior belts, crushers, thrusters, and asteroid collectors, steam turbine and related, and more
+    - (Secretas) Gold heat pipe recipe changed when Secretas polish is enabled
+      - Now an "upgrade" recipe and requires a regular heat pipe in its recipe
+      - Requires zinc solder if Paracelsin is installed
+  Changes:
+    - Tweaks to settings
+    - (Paracelsin) Advanced chemical plant research required for Paracelsin discovery when rebalance chemical plant upgrades is enabled
+  Bugfixes:
+    - (Paracelsin) Electrochemical plant now inherents adv. chem plant's recipes when rebalance chemical plant upgrades is enabled
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 01-04-2026
   Minor Features:
