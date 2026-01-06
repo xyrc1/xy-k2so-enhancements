@@ -56,6 +56,7 @@ end
 
 if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
     -- Logical progression
+    if mods['outer-rim'] then goto outer_rim_skip end
     remove_preqs('golden-science-pack', {'planet-discovery-secretas'})
     add_preqs('golden-science-pack', {'steam-recycler'})
     -- Lock these behind auric tech card because you need those to unlock these.
@@ -82,6 +83,8 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
         remove_preqs(tech, {'planet-discovery-secretas'})
         add_preqs(tech, {'golden-science-pack'})
     end
+
+    ::outer_rim_skip::
     --- Other secretas patches
     t['science-pack-productivity'].hidden = true -- Remove this; bloat
     remove_cards('gold-heat-pipe', {'automation-science-pack', 'logistic-science-pack', 'chemical-science-pack'}) -- redundant cards at this point
@@ -180,3 +183,4 @@ if settings.startup['xy-tech-inflation'].value then
     end
 
 end
+
