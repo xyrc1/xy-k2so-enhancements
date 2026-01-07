@@ -49,6 +49,7 @@ data.extend({
         localised_name = {'item-name.xy-spacecraft-research-data'},
     },
 })
+--- Convert science packs into tech cards
 local to_convert = {
     'cryochemical',
     'insulation',
@@ -84,3 +85,4 @@ for _,pack in pairs(to_convert) do
         type = 'unlock-recipe', recipe = research_data_recipe.name
     })
 end
+--- Tech card changes

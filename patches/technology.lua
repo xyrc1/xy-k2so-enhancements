@@ -1,26 +1,7 @@
 local t = data.raw.technology
-local function add_preqs(tech, preqs)
-    if t[tech] then
-        for _,v in pairs(preqs) do
-            table.insert(t[tech].prerequisites, v)
-        end
-    else
-        log(tech..' - Tech does not exist!')
-    end
-end
-local function remove_preqs(tech, preqs_to_remove) -- Should be used before add_preqs() if both are needed
-    if t[tech] then
-        for _,to_remove in pairs(preqs_to_remove) do
-            for i,existing_preq in pairs(t[tech].prerequisites) do
-                if existing_preq == to_remove then
-                    table.remove(t[tech].prerequisites, i)
-                end
-            end
-        end
-    else
-        log(tech..' - Tech does not exist!')
-    end
-end
+local util = require('util.util')
+local remove_preqs = util.tech_remove_preqs
+local add_preqs = util.tech_add_preqs
 
 local function remove_cards(tech, cards_to_remove) -- Should be used before add_preqs() if both are needed
     if t[tech] then
