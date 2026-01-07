@@ -5,7 +5,7 @@ data.extend({
         name = 'xy-cryochemical-research-data',
         icon = '__xy-k2so-enhancements__/icons/cryochemical-research-data.png',
         subgroup = 'science-pack',
-        order = 'ao10[cryoch',
+        order = 'ao20[cryoch',
         stack_size = 200,
         weight = 1 * kg,
         default_import_location = 'paracelsin',
@@ -17,19 +17,43 @@ data.extend({
         name = 'xy-insulation-research-data',
         icon = '__xy-k2so-enhancements__/icons/insulation-research-data.png',
         subgroup = 'science-pack',
-        order = 'ao11[insu',
+        order = 'ao21[insu',
         stack_size = 200,
         weight = 1 * kg,
         default_import_location = 'paracelsin',
         
         localised_name = {'item-name.xy-insulation-research-data'},
     },
+    {
+        type = 'item',
+        name = 'xy-thermodynamic-research-data',
+        icon = '__xy-k2so-enhancements__/icons/thermodynamic-research-data.png',
+        subgroup = 'science-pack',
+        order = 'ao19[thermodyn',
+        stack_size = 200,
+        weight = 1 * kg,
+        default_import_location = 'aquilo',
+        
+        localised_name = {'item-name.xy-thermodynamic-research-data'},
+    },
+    {
+        type = 'item',
+        name = 'xy-spacecraft-research-data',
+        icon = '__xy-k2so-enhancements__/icons/spacecraft-research-data.png',
+        subgroup = 'science-pack',
+        order = 'ao22[thermodyn',
+        stack_size = 200,
+        weight = 1 * kg,
+        default_import_location = 'aquilo',
+        
+        localised_name = {'item-name.xy-spacecraft-research-data'},
+    },
 })
 local to_convert = {
     'cryochemical',
     'insulation',
-    --'thermodynamic',
-    --'spacecraft'
+    'thermodynamic',
+    'spacecraft'
 }
 for _,pack in pairs(to_convert) do
     local or_name = 'outer-rim-'..pack..'-science-pack'
