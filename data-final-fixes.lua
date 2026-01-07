@@ -11,4 +11,4 @@ require('patches.technology')
 
 -- updates; overrides over other mods
 
-require('updates.outer-rim')
+require('updates.outer-rim-final')
