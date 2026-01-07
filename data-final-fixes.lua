@@ -8,3 +8,7 @@ require('patches.category')
 require('patches.item_weight')
 require('patches.entity')
 require('patches.technology')
+
+-- updates; overrides over other mods
+
+require('updates.outer-rim')
