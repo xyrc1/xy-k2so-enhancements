@@ -18,10 +18,10 @@ data.raw.technology['outer-rim-thermodynamic-science-pack'].icon = '__xy-k2so-en
 data.raw.technology['outer-rim-cryochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/cryochemical-tech-card-research.png'
 data.raw.technology['outer-rim-spacecraft-science-pack'].icon = '__xy-k2so-enhancements__/icons/spacecraft-tech-card-research.png'
 -- Recipe icons
-data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/outer-rim-insulation-tech-card.png'
-data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/thermodynamic-tech-card.png'
-data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/cryochemical-tech-card.png'
-data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/spacecraft-tech-card.png'
+data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/insulation-tech-card.png'
+data.raw.recipe['outer-rim-thermodynamic-science-pack'].icon = '__xy-k2so-enhancements__/icons/thermodynamic-tech-card.png'
+data.raw.recipe['outer-rim-cryochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/cryochemical-tech-card.png'
+data.raw.recipe['outer-rim-spacecraft-science-pack'].icon = '__xy-k2so-enhancements__/icons/spacecraft-tech-card.png'
 
 -- Item names
 data.raw.tool['outer-rim-insulation-science-pack'].localised_name = {'item-name.xy-insulation-tech-card'}
