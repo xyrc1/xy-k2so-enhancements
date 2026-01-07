@@ -17,12 +17,16 @@ data.raw.technology['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhan
 data.raw.technology['outer-rim-thermodynamic-science-pack'].icon = '__xy-k2so-enhancements__/icons/thermodynamic-tech-card-research.png'
 data.raw.technology['outer-rim-cryochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/cryochemical-tech-card-research.png'
 data.raw.technology['outer-rim-spacecraft-science-pack'].icon = '__xy-k2so-enhancements__/icons/spacecraft-tech-card-research.png'
+-- Set cooling card icons; for a lot of reasons must be overriden
+data.raw.recipe['outer-rim-insulation-science-pack-cooling'].icons[1] = {icon = data.raw.tool['outer-rim-insulation-science-pack'].icon}
+data.raw.recipe['outer-rim-thermodynamic-science-pack-cooling'].icons[1] = {icon = data.raw.tool['outer-rim-thermodynamic-science-pack'].icon}
+data.raw.recipe['outer-rim-cryochemical-science-pack-cooling'].icons[1] = {icon = data.raw.tool['outer-rim-cryochemical-science-pack'].icon}
+data.raw.recipe['outer-rim-spacecraft-science-pack-cooling'].icons[1] = {icon = data.raw.tool['outer-rim-spacecraft-science-pack'].icon}
 -- Recipe icons
 --data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/insulation-tech-card.png'
 --data.raw.recipe['outer-rim-thermodynamic-science-pack'].icon = '__xy-k2so-enhancements__/icons/thermodynamic-tech-card.png'
 --data.raw.recipe['outer-rim-cryochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/cryochemical-tech-card.png'
 --data.raw.recipe['outer-rim-spacecraft-science-pack'].icon = '__xy-k2so-enhancements__/icons/spacecraft-tech-card.png'
-
 -- Item names
 data.raw.tool['outer-rim-insulation-science-pack'].localised_name = {'item-name.xy-insulation-tech-card'}
 data.raw.tool['outer-rim-thermodynamic-science-pack'].localised_name = {'item-name.xy-thermodynamic-tech-card'}
@@ -35,3 +39,6 @@ data.raw.tool['outer-rim-thermodynamic-science-pack'].localised_name = {'item-na
 data.raw.tool['outer-rim-cryochemical-science-pack'].localised_name = {'item-name.xy-cryochemical-tech-card'}
 data.raw.tool['outer-rim-spacecraft-science-pack'].localised_name = {'item-name.xy-spacecraft-tech-card'}
 data.raw.tool['golden-science-pack'].localised_name = {'item-name.xy-precise-electronic-tech-card'}
+--- Non visual
+-- this is done in updates so have to re-override
+data.raw.recipe['outer-rim-spacecraft-science-pack'].surface_conditions = {}
