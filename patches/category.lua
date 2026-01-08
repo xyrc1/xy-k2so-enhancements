@@ -96,7 +96,7 @@ if mods['science-tab'] then
         'golden-science-pack',
         'outer-rim-spacecraft-science-pack',
 
-        ['z']='promethium-science-pack',
+        'promethium-science-pack', -- Always last (unless something adds post-promethium)
     }
 
     apply_item_subgroup('xy-research-data', order_research_data, 'item')
