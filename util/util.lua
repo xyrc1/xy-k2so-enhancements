@@ -43,5 +43,14 @@ local function remove_cards(tech, cards_to_remove) -- Should be used before add_
 end
 utils.tech_remove_cards = remove_cards
 
+local function order_from_index(list, prototype)
+    for index,item in list do
+        local v = data.raw[prototype]
+        if v then 
+            v.order = index
+        end
+    end
+end
+utils.order_from_index = order_from_index
 
 return utils

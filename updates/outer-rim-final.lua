@@ -23,10 +23,8 @@ data.raw.recipe['outer-rim-thermodynamic-science-pack-cooling'].icons[1] = {icon
 data.raw.recipe['outer-rim-cryochemical-science-pack-cooling'].icons[1] = {icon = data.raw.tool['outer-rim-cryochemical-science-pack'].icon}
 data.raw.recipe['outer-rim-spacecraft-science-pack-cooling'].icons[1] = {icon = data.raw.tool['outer-rim-spacecraft-science-pack'].icon}
 -- Recipe icons
---data.raw.recipe['outer-rim-insulation-science-pack'].icon = '__xy-k2so-enhancements__/icons/insulation-tech-card.png'
---data.raw.recipe['outer-rim-thermodynamic-science-pack'].icon = '__xy-k2so-enhancements__/icons/thermodynamic-tech-card.png'
---data.raw.recipe['outer-rim-cryochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/cryochemical-tech-card.png'
---data.raw.recipe['outer-rim-spacecraft-science-pack'].icon = '__xy-k2so-enhancements__/icons/spacecraft-tech-card.png'
+data.raw.recipe['galvanization-science-pack'].icon = '__xy-k2so-enhancements__/icons/galvanization-tech-card.png'
+data.raw.recipe['golden-science-pack'].icon = '__xy-k2so-enhancements__/icons/golden-tech-card.png'
 -- Item names
 data.raw.tool['outer-rim-insulation-science-pack'].localised_name = {'item-name.xy-insulation-tech-card'}
 data.raw.tool['outer-rim-thermodynamic-science-pack'].localised_name = {'item-name.xy-thermodynamic-tech-card'}
