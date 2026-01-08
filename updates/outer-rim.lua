@@ -88,6 +88,7 @@ for _,pack in pairs(to_convert) do
 end
 --- Tech card changes
 local strip_cards = {
+    'planet-discovery-secretas',
     'transport-belt-capacity-3-Secretas',
     'hyper-inserter',
     'efficiency-module-4-S',
