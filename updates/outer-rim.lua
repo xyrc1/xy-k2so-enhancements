@@ -1,4 +1,5 @@
 if not mods['outer-rim'] then return end
+local util = require('util.util')
 data.extend({ 
     {
         type = 'item',
@@ -86,3 +87,32 @@ for _,pack in pairs(to_convert) do
     })
 end
 --- Tech card changes
+local strip_cards = {
+    'transport-belt-capacity-3-Secretas',
+    'hyper-inserter',
+    'efficiency-module-4-S',
+    'quality-module-4-S',
+    'speed-module-4-S',
+    'productivity-module-4-S',
+    'module-finale',
+    'pentapod-egg-unrestricted',
+    'galvanized-steel',
+    'zinc-piping',
+    'elevated-pipe',
+    'advanced-repair-device',
+    'gold-railgun-turret',
+    'spaceship-scrap-recycling-productivity',
+    'gold-plate-productivity',
+    'vaterite-processing-productivity',
+    'concrete-productivity',
+    'long-dstance-transmission',-- why
+    -- why
+    'ftl_Fed_Scout_tech',
+    'ftl_Bomber_tech',
+    'ftl_Kestrel_tech',
+    'ftl_Stealth_tech',
+    'ftl_Fed_Cruiser_tech',
+}
+for _,tech in pairs(strip_cards) do
+    util.tech_remove_cards(tech, {'logistic-science-pack','military-science-pack','automation-science-pack'})
+end
