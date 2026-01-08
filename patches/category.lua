@@ -92,10 +92,11 @@ if mods['science-tab'] then
         'galvanization-science-pack',
         'outer-rim-cryochemical-science-pack',
         'outer-rim-insulation-science-pack',
+        'kr-singularity-tech-card',
         'golden-science-pack',
         'outer-rim-spacecraft-science-pack',
 
-        'promethium-science-pack',
+        ['z']='promethium-science-pack',
     }
 
     apply_item_subgroup('xy-research-data', order_research_data, 'item')

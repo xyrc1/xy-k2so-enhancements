@@ -43,11 +43,12 @@ local function remove_cards(tech, cards_to_remove) -- Should be used before add_
 end
 utils.tech_remove_cards = remove_cards
 
-local function order_from_index(list, prototype)
+local function order_from_index(list, prototype, lead)
+    local lead = lead or 'z'
     for index,item in pairs(list) do
         local v = data.raw[prototype][item]
         if v then 
-            v.order = tostring(index)
+            v.order = lead..tostring(index)
         end
     end
 end
