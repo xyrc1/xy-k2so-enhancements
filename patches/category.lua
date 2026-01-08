@@ -105,15 +105,10 @@ if mods['science-tab'] then
     apply_item_subgroup('xy-special-science', {
         'kr-space-research-data-advanced',
         'cerys-space-science-pack-from-methane-ice',
+        'space-science-pack-muluna',
     }, 'recipe')
     util.order_from_index(order_research_data, 'item')
     util.order_from_index(order_tech_card_1, 'tool')
     util.order_from_index(order_tech_card_2, 'tool')
     util.order_from_index(order_tech_card_3, 'tool')
-
-    local order_tech_card_from_cooling = {}
-    for _,v in pairs(order_tech_card_1) do table.insert(order_tech_card_from_cooling, v..'-cooling') end
-    for _,v in pairs(order_tech_card_2) do table.insert(order_tech_card_from_cooling, v..'-cooling') end
-    for _,v in pairs(order_tech_card_3) do table.insert(order_tech_card_from_cooling, v..'-cooling') end
-    util.order_from_index(order_tech_card_from_cooling, 'recipe')
 end
