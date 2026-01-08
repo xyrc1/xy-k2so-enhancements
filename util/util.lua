@@ -45,7 +45,7 @@ utils.tech_remove_cards = remove_cards
 
 local function order_from_index(list, prototype)
     for index,item in pairs(list) do
-        local v = data.raw[prototype]
+        local v = data.raw[prototype][item]
         if v then 
             v.order = index
         end
