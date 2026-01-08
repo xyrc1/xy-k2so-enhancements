@@ -112,9 +112,13 @@ if settings.startup['xy-tech-inflation'].value then
     }
     local general_multi = { -- only applies the highest value, will make this a setting eventually but might be clutter? could organize into sections
         ['promethium-science-pack'] = 25,
+        ['outer-rim-spacecraft-science-pack'] = 15,
         ['golden-science-pack'] = 15,
         ['kr-singularity-tech-card'] = 15,
         ['kr-matter-tech-card'] = 10,
+        ['outer-rim-insulation-science-pack'] = 8,
+        ['outer-rim-cryochemical-science-pack'] = 6,
+        ['outer-rim-thermodynamic-science-pack'] = 6,
         ['cryogenic-science-pack'] = 6,
         ['galvanization-science-pack'] = 6,
         ['hydraulic-science-pack'] = 6,
