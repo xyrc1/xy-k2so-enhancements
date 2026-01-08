@@ -6,6 +6,9 @@ Date: 01-07-2026
       - All science packs replaced with sprited tech cards, including research data and recipes
       - Low tier tech cards removed from Outer Rim techs
       - Outer Rim tech cards supported by tech scaling setting
+    - (Science tab) All tech cards, including those added by this mod are sorted properly if "Science group" mod is installed
+      - Grouped into research datas, then three tiers of cards in the general order they are obtained
+      - Orders research data as well
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.6
 Date: 01-06-2026
