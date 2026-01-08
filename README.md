@@ -25,6 +25,7 @@ All settings in this category can be enabled or disabled in the mod settings!
   - Cerys' processing unit from nitric acid ratios changed and is locked to Cerys
   - Paracelsin's processing unit from nitric acid changed; notably requires one less advanced circuit
 - (Default off) Starting after the first four vanilla planets, all non-upgrade techs begin to use signifcantly more tech cards to complete, increasing later in the game. This is supposed to make the player use the tools K2, Space Age, and other mods add in order to build a "kilobase". The multiplier can be further adjusted in mod settings. **It is highly recommended to enable this setting**
+- Reorganizes tech cards and research data from K2 and other mods into a more digestable format if [Science group](https://mods.factorio.com/mod/science-tab) is installed
 - (Default off) Spidertron recipe requires raw fish again
 - (Default off) K2's Advanced Tank locked behind science from Vulcanus, Gleba, & Fulgora to encourage usage of combat spidertrons
 ### Paracelsin
@@ -36,16 +37,20 @@ All settings in this category can be enabled or disabled in the mod settings!
   - Adv. chemical plants are slightly cheaper overall to craft, crafting speed and bonus productivity halved (to 4x and +25%), energy usage slightly reduced, 10 can be shipped per rocket instead of 5
   - Electrochemical plants have quadruple the crafting speed and bonus productivity (to 8x and +50%), energy usage increased
   - Adv. chemical plants require two chemical plants to craft, and the electrochemical plant requires one adv. chemical plant
+- Mechanical plant can run a lot more recipes
 ### Secretas & Frozeta
 - Adds "new" auric tech card, replacing the golden science pack, as well as auric research data
 - Polishes the mod overall, including tweaking tech requirements and making recipes less insane
+### Outer Rim
+- Tech card replacements for all of the tech cards, with sprites and corresponding research data
+- Removes early game tech cards from Outer Rim affected researches
 ### Moshine
 - Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
 ### Maraxsis
 - Hydro plant can run fuel refinery recipes; this may put the cryo plant out of a job
 - (Default off) Add a connection from Moshine to Maraxsis which is 15000 km long
 ### Lab changes
-- Move all lab buildings to the science category if the [Science group](https://mods.factorio.com/mod/science-tab) mod is installed without needing to meet the ten lab requirement
+- Move all lab buildings to the science category if the Science group mod is installed without needing to meet the ten lab requirement
 - The singularity lab requires Muluna's cryolab instead of biolabs in its recipe. If Muluna isn't installed, quantum processors will be added to its recipe instead in order to require more Space Age materials (outside of Gleba)
 - If Paracelsin is installed, Muluna's cryolab requires galvanization tech cards (if enabled) and requires electric coils among other changes in its recipe
 - Biolabs rocket capacity increased from 1 to 5
