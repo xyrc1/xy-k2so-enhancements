@@ -41,6 +41,8 @@ All settings in this category can be enabled or disabled in the mod settings!
 ### Secretas & Frozeta
 - Adds "new" auric tech card, replacing the golden science pack, as well as auric research data
 - Polishes the mod overall, including tweaking tech requirements and making recipes less insane
+### Corrundum
+- Adds electrochemical tech card, replacing the electrochemical science pack, as well as electrochemical research data
 ### Outer Rim
 - Tech card replacements for all of the tech cards, with sprites and corresponding research data
 - Removes early game tech cards from Outer Rim affected researches
