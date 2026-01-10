@@ -28,6 +28,13 @@ All settings in this category can be enabled or disabled in the mod settings!
 - Reorganizes tech cards and research data from K2 and other mods into a more digestable format if [Science group](https://mods.factorio.com/mod/science-tab) is installed
 - (Default off) Spidertron recipe requires raw fish again
 - (Default off) K2's Advanced Tank locked behind science from Vulcanus, Gleba, & Fulgora to encourage usage of combat spidertrons
+### Corrundum
+- Adds electrochemical tech card, replacing the electrochemical science pack, as well as electrochemical research data
+### Maraxsis
+- Hydro plant can run fuel refinery recipes; this may put the cryo plant out of a job
+- (Default off) Add a connection from Moshine to Maraxsis which is 15000 km long
+### Moshine
+- Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
 ### Paracelsin
 - Adds galvanization tech card, replacing the galvanization science pack as seen in the thumbnail
   - Similar to other Space Age tech cards, galvanization tech cards must be produced on Paracelsin (through the same recipe as previously) before being combined with blank tech cards anywhere to produce the end product
@@ -41,16 +48,9 @@ All settings in this category can be enabled or disabled in the mod settings!
 ### Secretas & Frozeta
 - Adds auric tech card, replacing the golden science pack, as well as auric research data
 - Polishes the mod overall, including tweaking tech requirements and making recipes less insane
-### Corrundum
-- Adds electrochemical tech card, replacing the electrochemical science pack, as well as electrochemical research data
 ### Outer Rim
 - Tech card replacements for all of the tech cards, with sprites and corresponding research data
 - Removes early game tech cards from Outer Rim affected researches
-### Moshine
-- Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
-### Maraxsis
-- Hydro plant can run fuel refinery recipes; this may put the cryo plant out of a job
-- (Default off) Add a connection from Moshine to Maraxsis which is 15000 km long
 ### Lab changes
 - Move all lab buildings to the science category if the Science group mod is installed without needing to meet the ten lab requirement
 - The singularity lab requires Muluna's cryolab instead of biolabs in its recipe and inherits the cryolab's quality drain modifier. If Muluna isn't installed, quantum processors will be added to its recipe instead in order to require more Space Age materials (outside of Gleba)
