@@ -29,7 +29,7 @@ All settings in this category can be enabled or disabled in the mod settings!
 - (Default off) Spidertron recipe requires raw fish again
 - (Default off) K2's Advanced Tank locked behind science from Vulcanus, Gleba, & Fulgora to encourage usage of combat spidertrons
 ### Paracelsin
-- Adds "new" galvanization tech card, replacing the galvanization science pack as seen in the thumbnail
+- Adds galvanization tech card, replacing the galvanization science pack as seen in the thumbnail
   - Similar to other Space Age tech cards, galvanization tech cards must be produced on Paracelsin (through the same recipe as previously) before being combined with blank tech cards anywhere to produce the end product
   - Adjacent recipes such as "tech card with cooling" and tech card vessels exist as well
 - Galvanization tech cards can be toggled to be required for endgame research (post-promethium)
@@ -39,7 +39,7 @@ All settings in this category can be enabled or disabled in the mod settings!
   - Adv. chemical plants require two chemical plants to craft, and the electrochemical plant requires one adv. chemical plant
 - Mechanical plant can run a lot more recipes
 ### Secretas & Frozeta
-- Adds "new" auric tech card, replacing the golden science pack, as well as auric research data
+- Adds auric tech card, replacing the golden science pack, as well as auric research data
 - Polishes the mod overall, including tweaking tech requirements and making recipes less insane
 ### Corrundum
 - Adds electrochemical tech card, replacing the electrochemical science pack, as well as electrochemical research data
