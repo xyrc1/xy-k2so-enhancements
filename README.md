@@ -57,4 +57,9 @@ All settings in this category can be enabled or disabled in the mod settings!
 - If Paracelsin is installed, Muluna's cryolab requires galvanization tech cards (if enabled) and requires electric coils among other changes in its recipe
 - Biolabs rocket capacity increased from 1 to 5
 ***
+# Contributors
+**xyrc** - Main developer
+**advantaje** - Corrundum support & assets
+This mod is a project to unify K2SO with other mods to make the most cohesive gameplay possible. Please check out the mod's Github if you are interested in contributing to the mod.
+***
 Credits to Krastorio 2 as research data and tech card sprites were edited to create the assets in this mod.
