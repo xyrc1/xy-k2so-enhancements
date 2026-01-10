@@ -152,3 +152,77 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
         recipe = 'xy-golden-research-data',
     })
 end
+
+if mods['corrundum'] then
+    data.extend({
+        {
+            type = 'item',
+            name = 'xy-electrochemical-research-data',
+            icon = '__xy-k2so-enhancements__/icons/electrochemical-research-data.png',
+            subgroup = 'science-pack',
+            order = 'ao09[elec',
+            stack_size = 200,
+            weight = 1 * kg,
+            default_import_location = 'corrundum',
+
+            localised_name = {'item-name.xy-electrochemical-research-data'},
+        },
+        {
+            type = 'recipe',
+            name = 'xy-electrochemical-research-data',
+            enabled = false,
+            energy_required = 15,
+            ingredients = {
+                {type = 'item', name = 'sulfur', amount = 2},
+                {type = 'item', name = 'platinum-plate', amount = 1},
+                {type = 'fluid', name = 'sulfuric-acid', amount = 100},
+            },
+            results = {
+                {type = 'item', name = 'xy-electrochemical-research-data', amount = 1},
+            },
+            category = 'catalytic-chemistry',
+            allow_productivity = true,
+            surface_conditions = {
+                {property = 'pressure', min = 6000, max = 6000},
+                {property = 'magnetic-field', min = 99, max = 99}
+            },
+
+            always_show_products = true,
+            show_amount_in_title = false,
+            localised_name = {'item-name.xy-electrochemical-research-data'}
+        }
+    })
+end
+
+if settings.startup['xy-corrundum-tech-card'].value and mods['corrundum'] then
+    local t = data.raw['recipe']['electrochemical-science-pack']
+
+    t.energy_required = 20
+    t.category = 'kr-tech-cards'
+    t.surface_conditions = nil
+    t.ingredients = {
+        {type = 'item', name = 'kr-blank-tech-card', amount = 5},
+        {type = 'item', name = 'xy-electrochemical-research-data', amount = 5},
+    }
+    t.results = {
+        {type = 'item', name = 'electrochemical-science-pack', amount = 5},
+    }
+
+    t.always_show_products = true
+    t.show_amount_in_title = false
+    t.localised_name = {'item-name.xy-electrochemical-tech-card'}
+    t.icon = '__xy-k2so-enhancements__/icons/electrochemical-tech-card.png'
+
+    -- change the science pack name and icon to the right assets
+    data.raw['tool']['electrochemical-science-pack'].localised_name = {'item-name.xy-electrochemical-tech-card'}
+    data.raw['tool']['electrochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/electrochemical-tech-card.png'
+
+    -- add to research and change assets
+    data.raw['technology']['electrochemical-science-pack'].icon = '__xy-k2so-enhancements__/icons/electrochemical-tech-card-research.png'
+    data.raw['technology']['electrochemical-science-pack'].localised_name = {'item-name.xy-electrochemical-tech-card'}
+
+    table.insert(data.raw['technology']['electrochemical-science-pack'].effects, {
+        type = 'unlock-recipe',
+        recipe = 'xy-electrochemical-research-data',
+    })
+end
