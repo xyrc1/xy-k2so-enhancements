@@ -20,6 +20,16 @@ data:extend({
 
         localised_name = {'mod-setting-name.xy-secretas-tech-card'},
     },
+    {
+        type = 'bool-setting',
+        name = 'xy-corrundum-tech-card',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = '1-corru',
+
+        localised_name = {'mod-setting-name.xy-corrundum-tech-card'},
+    },
     --- Maraxsis
     {
         type = 'bool-setting',
