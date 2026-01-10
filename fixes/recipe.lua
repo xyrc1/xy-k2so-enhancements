@@ -93,7 +93,7 @@ if settings.startup['xy-spidertron-fish'].value then
     table.insert(data.raw.recipe['spidertron'].ingredients, {type = 'item', name = 'raw-fish', amount = 1})
 end
 
-if settings.startup['xy-mechanical-plant-more-recipes'].value then
+if settings.startup['xy-mechanical-plant-more-recipes'].value and mods['Paracelsin'] then
     local recipes = {
         -- consistency
         'kr-superior-transport-belt',
