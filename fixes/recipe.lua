@@ -55,12 +55,12 @@ if settings.startup['xy-processing-unit-alt'].value then
         }
     end
 
-    data.raw['recipe']['kr-bio-processing-circuit'].ingredients = {
+    --[[data.raw['recipe']['kr-bio-processing-circuit'].ingredients = { -- Patched into basically this in the main mod now
         {type = 'item', name = 'advanced-circuit', amount = 6}, -- use more
         {type = 'item', name = 'pentapod-egg', amount = 1},
         {type = 'fluid', name = 'sulfuric-acid', amount = 10},
     }
-    data.raw['recipe']['kr-bio-processing-circuit'].category = 'organic-or-assembling' -- changed from EM plant
+    data.raw['recipe']['kr-bio-processing-circuit'].category = 'organic-or-assembling']] -- changed from EM plant
 end
 
 if settings.startup['xy-lab-recipe-changes'].value then
