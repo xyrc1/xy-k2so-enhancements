@@ -57,6 +57,7 @@ if mods['science-tab'] then
         'kr-agricultural-research-data',
         'kr-electromagnetic-research-data',
         'kr-cerysian-research-data',
+        'xy-electrochemical-research-data',
         'hydraulic-research-data',
         'xy-thermodynamic-research-data',
         'kr-cryogenic-research-data',
@@ -68,7 +69,7 @@ if mods['science-tab'] then
         'xy-spacecraft-research-data',
         'kr-promethium-research-data',
     }
-    local order_tech_card_1 = {
+    local order_tech_card_1 = { -- "Basic" tech cards; pre-space
         'automation-science-pack',
         'logistic-science-pack',
         'military-science-pack',
@@ -76,16 +77,17 @@ if mods['science-tab'] then
         'production-science-pack',
         'utility-science-pack',
     }
-    local order_tech_card_2 = {
+    local order_tech_card_2 = { -- Muluna until planets w/ big asteroids
         'space-science-pack',
         'kr-advanced-tech-card',
         'metallurgic-science-pack',
         'agricultural-science-pack',
         'electromagnetic-science-pack',
         'cerysian-science-pack',
+        'electrochemical-science-pack',
         'interstellar-science-pack',
     }
-    local order_tech_card_3 = {
+    local order_tech_card_3 = { -- Big/huge asteroids
         'hydraulic-science-pack',
         'outer-rim-thermodynamic-science-pack',
         'cryogenic-science-pack',
