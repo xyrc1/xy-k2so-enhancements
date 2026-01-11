@@ -85,13 +85,21 @@ if settings.startup['xy-secretas-tech-card'].value and mods['secretas'] then
         table.insert(t['planet-discovery-secretas'].unit.ingredients, {'galvanization-science-pack', 1})
     end
 end
----
+--- Make K2's Adv. Tank more expensive to make you actually use the Spidertron for war purposes
 if settings.startup['xy-advanced-tank-expensive-research'].value then
     t['kr-advanced-tank'].unit.count = 2500
     table.insert(t['kr-advanced-tank'].unit.ingredients, {'metallurgic-science-pack', 1})
     table.insert(t['kr-advanced-tank'].unit.ingredients, {'agricultural-science-pack', 1})
     table.insert(t['kr-advanced-tank'].unit.ingredients, {'electromagnetic-science-pack', 1})
     add_preqs('kr-advanced-tank', {'metallurgic-science-pack','agricultural-science-pack','electromagnetic-science-pack'})
+end
+--- Wipe out early tech cards in mid-late technologies
+local strip_basic_tech_cards = {
+    -- Corrundrum
+    'calcium-sulfate', 'asphalt-and-concrete', 'calcium-sulfate-nutrients', 'calcium-sulfate-recovery', 'stone-production', 'blue-rocket', 'sulfonated-plastic', 'sulfur-poison-capsule',
+}
+for _,tech in pairs(strip_basic_tech_cards) do
+    util.tech_remove_cards(tech, {'logistic-science-pack','military-science-pack','automation-science-pack','chemical-science-pack'})
 end
 ----- MLE Tech Scaling -----
 if settings.startup['xy-tech-inflation'].value then
