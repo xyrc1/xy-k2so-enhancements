@@ -96,7 +96,7 @@ end
 --- Wipe out early tech cards in mid-late technologies
 local strip_basic_tech_cards = {
     -- Corrundrum
-    'calcium-sulfate', 'asphalt-and-concrete', 'calcium-sulfate-nutrients', 'calcium-sulfate-recovery', 'stone-production', 'blue-rocket', 'sulfonated-plastic', 'sulfur-poison-capsule',
+    'calcium-sulfate', 'asphalt-and-concrete', 'calcium-sulfate-nutrients', 'calcium-sulfate-recovery', 'stone-production', 'blue-rocket', 'sulfonated-plastic', 'sulfur-poison-capsule', 'recrystalization',
 }
 for _,tech in pairs(strip_basic_tech_cards) do
     util.tech_remove_cards(tech, {'logistic-science-pack','military-science-pack','automation-science-pack','chemical-science-pack'})
