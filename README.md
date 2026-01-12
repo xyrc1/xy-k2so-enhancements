@@ -20,7 +20,7 @@ All settings in this category can be enabled or disabled in the mod settings!
 ### General
 - Decrease the weight of many intermediates, making them easier to ship via rocket
   - This is primarily targetted and ingredients such as inserter parts or automation cores, to promote in-situ assembly of buildings
-- Processing unit altnerative recipe rebalance
+- Processing unit alternative recipe rebalance
   - Bio processing unit recipe ratios fixed and is made in biochamber instead of EM plant
   - Cerys' processing unit from nitric acid ratios changed and is locked to Cerys
   - Paracelsin's processing unit from nitric acid changed; notably requires one less advanced circuit
