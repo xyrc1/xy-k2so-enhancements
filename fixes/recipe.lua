@@ -104,6 +104,8 @@ if settings.startup['xy-mechanical-plant-more-recipes'].value and mods['Paracels
         'kr-superior-long-inserter',
         'hyper-inserter',
         'cerys-radiation-proof-inserter',
+        'rubia-long-bulk-inserter',
+        'rubia-long-stack-inserter',
         'kr-steel-pipe',
         'kr-steel-pipe-to-ground',
         'kr-steel-pump',

@@ -97,6 +97,8 @@ end
 local strip_basic_tech_cards = {
     -- Corrundrum
     'calcium-sulfate', 'asphalt-and-concrete', 'calcium-sulfate-nutrients', 'calcium-sulfate-recovery', 'stone-production', 'blue-rocket', 'sulfonated-plastic', 'sulfur-poison-capsule', 'recrystalization',
+    -- Rubia
+    'braking-force-8', 'craptonite-productivity', 'craptonite-axe', 'craptonite-wall', 'rubia-efficiency-module4', 'rubia-long-bulk-inserter', 'rubia-long-stack-inserter', 'rubia-bio-utility-science-pack', 'rubia-bio-flying-robot-frame', 'rubia-biochamber-productivity-bonus',
 }
 for _,tech in pairs(strip_basic_tech_cards) do
     util.tech_remove_cards(tech, {'logistic-science-pack','military-science-pack','automation-science-pack','chemical-science-pack'})
