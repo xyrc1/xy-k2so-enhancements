@@ -59,6 +59,7 @@ if mods['science-tab'] then
         'xy-battlefield-research-data',
         'kr-cerysian-research-data',
         'xy-electrochemical-research-data',
+        'xy-sun-research-data',
         'hydraulic-research-data',
         'xy-thermodynamic-research-data',
         'kr-cryogenic-research-data',
@@ -87,6 +88,7 @@ if mods['science-tab'] then
         'battlefield-science-pack',
         'cerysian-science-pack',
         'electrochemical-science-pack',
+        'slp-sun-science-pack',
         'interstellar-science-pack',
     }
     local order_tech_card_3 = { -- Big/huge asteroids
