@@ -27,4 +27,11 @@ return {
         ['short_name'] = 'battlefield',
         ['import_location'] = 'castra',
     },
+    {
+        ['mod'] = 'slp-dyson-sphere-reworked',
+        ['setting'] = true,
+        ['original_name'] = 'slp-sun-science-pack',
+        ['short_name'] = 'sun',
+        ['import_location'] = nil,
+    },
 }
