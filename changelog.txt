@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 01-16-2026
+  Features:
+    - (Castra) Add battlefield tech card replacement
+    - (SLP Dyson Sphere) Add plasma tech card replacement
+  Changes:
+    - Disabled the settings to toggle tech card replacements other than for Paracelsin
+    - Internally changed how tech card replacements are handled
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 01-10-2026
   Features:

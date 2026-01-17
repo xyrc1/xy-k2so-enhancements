@@ -1,7 +1,7 @@
 {
   "name": "xy-k2so-enhancements",
   "factorio_version" : "2.0",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "title": "xyrc's K2SO Enhancements",
   "author": "xyrc",
   "homepage": "https://github.com/xyrc1/xy-k2so-enhancements",
@@ -10,15 +10,17 @@
     "base >= 2.0.72", 
     "Krastorio2-spaced-out >= 1.6.1",
     "? nulls-k2so-tweaks",
+    "? castra",
     "? corrundum",
     "? maraxsis",
     "? Moshine",
     "? planet-muluna",
     "? Paracelsin",
     "? secretas",
+    "? outer-rim",
+    "? slp-dyson-sphere-reworked",
     "? se-space-trains",
-    "? science-tab",
-    "? outer-rim"
+    "? science-tab"
   ],
   "space_travel_required": true,
   "description": "Laundry list of tweaks, fixes, and overall enhancements to Krastorio 2 Spaced Out for compatability with other mods, consistency changes, and balancing. Adds sprited tech cards to a lot of mods. Patches vehicles added by other mods to work with K2's equipment system. Patches can be toggled in settings."
