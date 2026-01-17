@@ -7,6 +7,7 @@ data:extend({
         default_value = true,
 
         order = '1-parac',
+        hidden = true,
 
         localised_name = {'mod-setting-name.xy-paracelsin-tech-card'},
     },
@@ -17,6 +18,7 @@ data:extend({
         default_value = true,
 
         order = '1-secre',
+        hidden = true,
 
         localised_name = {'mod-setting-name.xy-secretas-tech-card'},
     },
@@ -25,6 +27,7 @@ data:extend({
         name = 'xy-corrundum-tech-card',
         setting_type = 'startup',
         default_value = true,
+        hidden = true,
 
         order = '1-corru',
 

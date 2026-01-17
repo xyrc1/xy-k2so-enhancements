@@ -8,21 +8,21 @@ return {
     },
     {
         ['mod'] = 'secretas',
-        ['setting'] = settings.startup['xy-secretas-tech-card'].value,
+        ['setting'] = true,
         ['original_name'] = 'golden-science-pack',
         ['short_name'] = 'golden',
         ['import_location'] = 'frozeta',
     },
     {
         ['mod'] = 'corrundum',
-        ['setting'] = settings.startup['xy-corrundum-tech-card'].value,
+        ['setting'] = true,
         ['original_name'] = 'electrochemical-science-pack',
         ['short_name'] = 'electrochemical',
         ['import_location'] = 'corrundum',
     },
     {
         ['mod'] = 'castra',
-        ['setting'] = true,-- change later
+        ['setting'] = true,
         ['original_name'] = 'battlefield-science-pack',
         ['short_name'] = 'battlefield',
         ['import_location'] = 'castra',
