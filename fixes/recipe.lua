@@ -187,3 +187,7 @@ if settings.startup['xy-secretas-polish'].value and mods['secretas'] then
         {type = 'item', name = 'kr-superior-inserter', amount = 1},
     }
 end
+
+if mods['rubia'] then
+    data.raw.recipe['rubia-biofusion-promethium-science-pack'].icons[1].icon = '__k2so-assets__/icons/cards/promethium-research-data.png'
+end
