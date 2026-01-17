@@ -58,7 +58,7 @@ local function reformat(original_name, short_name, import_location, tech_name)
     })
     t.icons = nil
     t.icon = '__xy-k2so-enhancements__/icons/'..short_name..'-tech-card-research.png'
-    r.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
+    t.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
 end
 
 ---
