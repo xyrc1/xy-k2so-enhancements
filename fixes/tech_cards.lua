@@ -1,7 +1,8 @@
-local function reformat(original_name, short_name, import_location)
+local function reformat(original_name, short_name, import_location, tech_name)
     -- The actual name of the science pack, the "relevant" part of the science pack name, import location
-    -- Ex: 'cryogenic-science-pack', 'cryogenic', 'aquilo'
+    -- Ex: 'cryogenic-science-pack', 'cryogenic', 'aquilo', nil
     -- The first arg exists cause some mods will start their items with "kr-" for example
+    -- tech_name is for (bad) mods where the tech name to unlock the tech card is not the same as the actual item itself
     local research_data_name = short_name..'-research-data'
     -- Create research data item
     data.extend({ 
@@ -50,7 +51,8 @@ local function reformat(original_name, short_name, import_location)
     i.icon = '__xy-k2so-enhancements__/icons/'..short_name..'-tech-card.png'
     i.localised_name = {'item-name.xy-'..short_name..'-tech-card'}
     -- Finally, change the technology to give research data recipe + change its icons and loc
-    local t = data.raw.technology[original_name]
+    local tech_name = tech_name or original_name
+    local t = data.raw.technology[tech_name]
     table.insert(t.effects, {
         type = 'unlock-recipe', recipe = research_data_recipe.name
     })
@@ -63,6 +65,6 @@ end
 
 for _,card_data in pairs(require('fixes.tech_cards_list')) do
     if mods[card_data.mod] and card_data.setting then
-        reformat(card_data['original_name'], card_data['short_name'], card_data['import_location'])
+        reformat(card_data['original_name'], card_data['short_name'], card_data['import_location'], card_data['tech_name'])
     end
 end

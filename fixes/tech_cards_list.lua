@@ -33,5 +33,6 @@ return {
         ['original_name'] = 'slp-sun-science-pack',
         ['short_name'] = 'sun',
         ['import_location'] = nil,
+        ['tech_name'] = 'slp-sunpack'
     },
 }
