@@ -152,7 +152,7 @@ if settings.startup['xy-secretas-polish'].value and mods['secretas'] then
         {type = 'item', name = 'gold-plate', amount = 5},
         {type = 'item', name = 'quantum-processor', amount = 5},
         {type = 'item', name = 'kr-ai-core', amount = 5},
-        {type = 'item', name = 'bioflux', amount = 5},
+        {type = 'item', name = 'golden-biter-egg', amount = 5},
         {type = 'item', name = 'productivity-module-3', amount = 4},
     }
     data.raw.recipe['quality-module-4-S'].ingredients = {
