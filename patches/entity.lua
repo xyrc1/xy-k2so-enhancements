@@ -1,4 +1,4 @@
--- always
+local util = require('util.util')
 -- buff tesla weapons since theyre untouched by K2 and are therefore powercrept
 -- if theres power creep its easier to just keep going with it than to stop it
 -- if the player is interested in challenges, armored biters or other mods are always a "fun" option
@@ -58,4 +58,23 @@ end
 
 if settings.startup['xy-lab-recipe-changes'].value and mods['planet-muluna'] then
     data.raw['lab']['kr-singularity-lab'].uses_quality_drain_modifier = true
+end
+
+if settings.startup['xy-advanced-centrifuge-rebalance'].value and mods['advanced-centrifuge'] then
+    local advcent = data.raw['assembling-machine']['k11-advanced-centrifuge']
+    advcent.crafting_speed = 4
+    advcent.effect_receiver = {base_effect = {productivity = 0.5}}
+    -- move the tech from matter cards down to electromagnetic cards
+    -- the other adv. buildings arent locked like that
+    util.tech_remove_cards('k11-advanced-centrifuge', {'kr-matter-tech-card'})
+    table.insert(data.raw.technology['k11-advanced-centrifuge'].unit.ingredients, 'electromagnetic-science-pack')
+    util.tech_add_preqs('k11-advanced-centrifuge', {'electromagnetic-science-pack'})
+    -- recipe
+    data.raw.recipe['k11-advanced-centrifuge'].ingredients = {
+        {type = 'item', name = 'kr-imersium-gear-wheel', amount = 50},
+        {type = 'item', name = 'electric-engine-unit', amount = 40},
+        {type = 'item', name = 'refined-concrete', amount = 200},
+        {type = 'item', name = 'kr-energy-control-unit', amount = 50},
+        {type = 'item', name = 'centrifuge', amount = 4},
+    }
 end
