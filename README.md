@@ -11,10 +11,10 @@ The mods settings are detailed more in game, including effects on existing saves
 ## Built-in
 ### Tech Cards
 - The following mods have their science packs replaced with K2 appropriate tech cards. All tech cards are made from research data the same way other space age tech cards are handled:
-  - Castra, Corrundum, Paracelsin, Secretas, Outer Rim, SLP Dyson Sphere Reworked
+  - Castra, Corrundum, Paracelsin, Secretas, Outer Rim, SLP Dyson Sphere Reworked, Rubia (partial)
 ### Vehicles & Equipment
 - Vehicles and trains from external mods are now properly supported by K2's equipment system
-  - Supported: Muluna's rocket buggy, SE Space Trains, Maraxsis' submarines
+  - Supported: Muluna's rocket buggy, SE Space Trains, Maraxsis' submarines, Rubia's Armored Trains
   - Stats such as weight and weapon range are also fixed and consume the proper fuels
 - Solar panel from silicon cell recipe is now an bulk recipe, uses more ingredients to output 4 solar panels at once
 - Range and firerate of tesla turret and tesla gun buffed; tesla turret draws half the power passively
@@ -24,7 +24,6 @@ All settings in this category can be enabled or disabled in the mod settings!
 - Decrease the weight of many intermediates, making them easier to ship via rocket
   - This is primarily targetted and ingredients such as inserter parts or automation cores, to promote in-situ assembly of buildings
 - Processing unit alternative recipe rebalance
-  - Bio processing unit recipe ratios fixed and is made in biochamber instead of EM plant
   - Cerys' processing unit from nitric acid ratios changed and is locked to Cerys
   - Paracelsin's processing unit from nitric acid changed; notably requires one less advanced circuit
 - (Default off) Starting after the first four vanilla planets, all non-upgrade techs begin to use signifcantly more tech cards to complete, increasing later in the game. This is supposed to make the player use the tools K2, Space Age, and other mods add in order to build a "kilobase". The multiplier can be further adjusted in mod settings. **It is highly recommended to enable this setting**
