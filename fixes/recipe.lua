@@ -94,42 +94,7 @@ if settings.startup['xy-spidertron-fish'].value then
 end
 
 if settings.startup['xy-mechanical-plant-more-recipes'].value and mods['Paracelsin'] then
-    local recipes = {
-        -- consistency
-        'kr-superior-transport-belt',
-        'kr-superior-underground-belt',
-        'kr-superior-splitter',
-        'kr-superior-loader',
-        'kr-superior-inserter',
-        'kr-superior-long-inserter',
-        'hyper-inserter',
-        'cerys-radiation-proof-inserter',
-        'rubia-long-bulk-inserter',
-        'rubia-long-stack-inserter',
-        'kr-steel-pipe',
-        'kr-steel-pipe-to-ground',
-        'kr-steel-pump',
-        'kr-big-storage-tank',
-        'kr-huge-storage-tank',
-        'pumpjack',
-        'rail-minmal',
-        'rail-ramp-minimal',
-        -- actually helpful
-        'offshore-pump',
-        'kr-inserter-parts',
-        'centrifuge',
-        'electric-mining-drill',
-        'kr-electric-mining-drill-mk2',
-        'crusher',
-        'muluna-steam-crusher',
-        'crusher-2',
-        'kr-crusher',
-        'steam-engine',
-        'steam-turbine',
-        'kr-advanced-steam-turbine',
-        'asteroid-collector',
-        'thruster',
-    }
+    local recipes = require('util.lists')['mechanical-plant-more-recipes']
     add_additional_categories(recipes, 'mechanics')
 end
 
