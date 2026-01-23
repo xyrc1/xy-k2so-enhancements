@@ -99,5 +99,6 @@ end
 --- Specific card patches
 if mods['pelagos'] then
     data.raw.item['xy-decomposition-research-data'].spoil_ticks = 81000
+    data.raw.item['xy-decomposition-research-data'].spoil_result = 'spoilage'
     data.raw.tool['pelagos-science-pack'].spoil_result = 'kr-blank-tech-card'
 end
