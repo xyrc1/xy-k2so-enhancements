@@ -1,14 +1,6 @@
 local util = require('util.util')
 local loader_graphics = require('__Krastorio2-spaced-out__.prototypes.buildings.loader-graphics')
 if mods['planetaris-arig'] and true then
-    local to_replace = {
-        'kr-superior-transport-belt',
-        'kr-superior-underground-belt',
-        -- loader here
-    }
-    for _,r in pairs(to_replace) do
-        util.replace_ingred_name(r, 'turbo-transport-belt', 'planetaris-hyper-transport-belt')
-    end
     -- Patch so that turbo (green) -> hyper (white) -> superior (purple) belts
     util.tech_remove_preqs('kr-logistic-5', {'turbo-transport-belt'})
     util.tech_add_preqs('kr-logistic-5', {'planetaris-hyper-transport-belt'})
@@ -80,9 +72,23 @@ if mods['planetaris-arig'] and true then
             belt_animation_set = belt_anim,
             animation_speed_coefficient = 32,
             icon_draw_specification = {scale = 0.7},
-            structure = loader_graphics.structure({220,220,220}),
+            structure = loader_graphics.structure({250,250,250}),
             structure_render_layer = loader_graphics.structure_render_layer,
             circuit_wire_max_distance = default_circuit_wire_max_distance,
         }
     })
+    --- Integrate hyper loader
+    table.insert(data.raw.technology['planetaris-hyper-transport-belt'].effects, {type = 'unlock-recipe', recipe = 'xy-hyper-loader'})
+    -- replacements
+    util.replace_ingred_name('kr-superior-transport-belt', 'turbo-transport-belt', 'planetaris-hyper-transport-belt')
+    util.replace_ingred_name('kr-superior-underground-belt', 'turbo-underground-belt', 'planetaris-hyper-underground-belt')
+    util.replace_ingred_name('kr-superior-loader', 'kr-advanced-loader', 'xy-hyper-loader')
+    --- finally, reorder all so that hyper appears before superior
+    data.raw.item['kr-superior-transport-belt'].order = 'a[transport-belt]-f[superior-transport-belt]'
+    data.raw.item['planetaris-hyper-transport-belt'].order = 'a[transport-belt]-e[hyper-transport-belt]'
+    data.raw.item['kr-superior-underground-belt'].order = 'b[underground-belt]-f[superior-underground-belt]'
+    data.raw.item['planetaris-hyper-underground-belt'].order = 'b[underground-belt]-e[hyper-underground-belt]'
+    data.raw.item['kr-superior-splitter'].order = 'z-c[splitter]-f[superior-splitter]'
+    data.raw.item['planetaris-hyper-splitter'].order = 'z-c[splitter]-e[hyper-splitter]'
+    data.raw.item['kr-superior-loader'].order = 'z-d[loader]-a6[kr-superior-loader]'
 end

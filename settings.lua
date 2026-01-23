@@ -101,6 +101,18 @@ data:extend({
 
         localised_name = {'mod-setting-name.xy-mechanical-plant-more-recipes'},
     },
+    --- Planetaris: Arig
+    {
+        type = 'bool-setting',
+        name = 'xy-arig-belts',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = 'taris-arig-a',
+
+        localised_name = {'mod-setting-name.xy-arig-belts'},
+        localised_description = {'mod-setting-description.xy-arig-belts'},
+    },
     --- Secretas
     {
         type = 'bool-setting',
