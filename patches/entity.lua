@@ -70,6 +70,12 @@ if settings.startup['xy-advanced-centrifuge-rebalance'].value and mods['advanced
     table.insert(data.raw.technology['k11-advanced-centrifuge'].unit.ingredients, {'electromagnetic-science-pack', 1})
     util.tech_add_preqs('k11-advanced-centrifuge', {'electromagnetic-science-pack'})
     -- recipe
+    local ingred1 = {type = 'item', name = 'centrifuge', amount = 4}
+    if mods['atan-nuclear-science'] then
+        ingred1 = {type = 'item', name = 'atan-atom-forge', amount = 2}
+        util.tech_add_preqs('k11-advanced-centrifuge', {'atan-atom-forge'})
+        util.tech_remove_preqs('k11-advanced-centrifuge', {'nuclear-science-pack'}) -- this is a sub prereq already
+    end
     data.raw.recipe['k11-advanced-centrifuge'].ingredients = {
         {type = 'item', name = 'kr-imersium-gear-wheel', amount = 50},
         {type = 'item', name = 'electric-engine-unit', amount = 40},
