@@ -114,11 +114,17 @@ end
 if settings.startup['xy-endgame-requires-all-cards'].value then
     local tech_cards_list = require('fixes.tech_cards_list')
     local installed_cards = {}
+    local card_prereq_techs = {}
     for _, card_data in pairs(tech_cards_list) do
         if mods[card_data.mod] and card_data.setting and not card_data.basic_card then
             table.insert(installed_cards, card_data.original_name)
+            table.insert(card_prereq_techs, card_data.tech_name or card_data.original_name)
         end
     end
+    table.insert(installed_cards, 'kr-matter-tech-card')
+    table.insert(installed_cards, 'kr-singularity-tech-card')
+    table.insert(card_prereq_techs, 'kr-matter-tech-card')
+    table.insert(card_prereq_techs, 'kr-singularity-tech-card')
 
     for _, tech in pairs(t) do
         if not tech.unit then goto continueEndgame end
@@ -140,6 +146,18 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
                 end
                 if not already_has then
                     table.insert(tech.unit.ingredients, {card_name, 1})
+                end
+            end
+            for _, prereq_tech in pairs(card_prereq_techs) do
+                local already_preq = false
+                for _, existing in pairs(tech.prerequisites or {}) do
+                    if existing == prereq_tech then
+                        already_preq = true
+                        break
+                    end
+                end
+                if not already_preq then
+                    add_preqs(tech.name, {prereq_tech})
                 end
             end
         end
