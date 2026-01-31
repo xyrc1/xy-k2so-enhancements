@@ -120,32 +120,30 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
         end
     end
 
-    if #installed_cards > 0 then
-        for _, tech in pairs(t) do
-            if not tech.unit then goto continue_endgame end
-            local has_promethium = false
-            for _, ingredient in pairs(tech.unit.ingredients) do
-                if ingredient[1] == 'promethium-science-pack' then
-                    has_promethium = true
-                    break
-                end
+    for _, tech in pairs(t) do
+        if not tech.unit then goto continueEndgame end
+        local has_promethium = false
+        for _, ingredient in pairs(tech.unit.ingredients) do
+            if ingredient[1] == 'promethium-science-pack' then
+                has_promethium = true
+                break
             end
-            if has_promethium then
-                for _, card_name in pairs(installed_cards) do
-                    local already_has = false
-                    for _, ingredient in pairs(tech.unit.ingredients) do
-                        if ingredient[1] == card_name then
-                            already_has = true
-                            break
-                        end
-                    end
-                    if not already_has then
-                        table.insert(tech.unit.ingredients, {card_name, 1})
-                    end
-                end
-            end
-            ::continue_endgame::
         end
+        if has_promethium then
+            for _, card_name in pairs(installed_cards) do
+                local already_has = false
+                for _, ingredient in pairs(tech.unit.ingredients) do
+                    if ingredient[1] == card_name then
+                        already_has = true
+                        break
+                    end
+                end
+                if not already_has then
+                    table.insert(tech.unit.ingredients, {card_name, 1})
+                end
+            end
+        end
+        ::continueEndgame::
     end
 end
 
