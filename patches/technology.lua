@@ -125,6 +125,10 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
     table.insert(installed_cards, 'kr-singularity-tech-card')
     table.insert(card_prereq_techs, 'kr-matter-tech-card')
     table.insert(card_prereq_techs, 'kr-singularity-tech-card')
+    if mods['planet-muluna'] then
+        table.insert(installed_cards, 'interstellar-science-pack')
+        table.insert(card_prereq_techs, 'interstellar-science-pack')
+    end
 
     -- Add all installed cards and prerequisites to the promethium-science-pack technology
     local promethium_tech = t['promethium-science-pack']
