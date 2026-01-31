@@ -126,6 +126,38 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
     table.insert(card_prereq_techs, 'kr-matter-tech-card')
     table.insert(card_prereq_techs, 'kr-singularity-tech-card')
 
+    -- Add all installed cards and prerequisites to the promethium-science-pack technology
+    local promethium_tech = t['promethium-science-pack']
+    if promethium_tech and promethium_tech.unit then
+        for _, card_name in pairs(installed_cards) do
+            if card_name ~= 'promethium-science-pack' then
+                local already_has = false
+                for _, ingredient in pairs(promethium_tech.unit.ingredients) do
+                    if ingredient[1] == card_name then
+                        already_has = true
+                        break
+                    end
+                end
+                if not already_has then
+                    table.insert(promethium_tech.unit.ingredients, {card_name, 1})
+                end
+            end
+        end
+        for _, prereq_tech in pairs(card_prereq_techs) do
+            local already_preq = false
+            for _, existing in pairs(promethium_tech.prerequisites or {}) do
+                if existing == prereq_tech then
+                    already_preq = true
+                    break
+                end
+            end
+            if not already_preq then
+                add_preqs('promethium-science-pack', {prereq_tech})
+            end
+        end
+    end
+
+    -- Add all installed cards as ingredients to every other promethium-tier tech
     for _, tech in pairs(t) do
         if not tech.unit then goto continueEndgame end
         local has_promethium = false
@@ -146,18 +178,6 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
                 end
                 if not already_has then
                     table.insert(tech.unit.ingredients, {card_name, 1})
-                end
-            end
-            for _, prereq_tech in pairs(card_prereq_techs) do
-                local already_preq = false
-                for _, existing in pairs(tech.prerequisites or {}) do
-                    if existing == prereq_tech then
-                        already_preq = true
-                        break
-                    end
-                end
-                if not already_preq then
-                    add_preqs(tech.name, {prereq_tech})
                 end
             end
         end
