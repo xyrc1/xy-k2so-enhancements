@@ -121,8 +121,10 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
             table.insert(card_prereq_techs, card_data.tech_name or card_data.original_name)
         end
     end
+    table.insert(installed_cards, 'kr-advanced-tech-card')
     table.insert(installed_cards, 'kr-matter-tech-card')
     table.insert(installed_cards, 'kr-singularity-tech-card')
+    table.insert(card_prereq_techs, 'kr-advanced-tech-card')
     table.insert(card_prereq_techs, 'kr-matter-tech-card')
     table.insert(card_prereq_techs, 'kr-singularity-tech-card')
     if mods['planet-muluna'] then
