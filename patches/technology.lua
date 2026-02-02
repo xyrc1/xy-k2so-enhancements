@@ -129,6 +129,10 @@ if settings.startup['xy-endgame-requires-all-cards'].value then
         table.insert(installed_cards, 'interstellar-science-pack')
         table.insert(card_prereq_techs, 'interstellar-science-pack')
     end
+    if mods['maraxsis'] then
+        table.insert(installed_cards, 'hydraulic-science-pack')
+        table.insert(card_prereq_techs, 'hydraulic-science-pack')
+    end
 
     -- Add all installed cards and prerequisites to the promethium-science-pack technology
     local promethium_tech = t['promethium-science-pack']
