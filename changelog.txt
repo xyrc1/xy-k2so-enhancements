@@ -2,7 +2,7 @@
 Version: 0.7.0
 Date: 01-31-2026
   Features:
-    - Endgame technologies (those requiring promethium tech cards) now require all installed addon planet tech cards, K2 matter tech cards, and K2 singularity tech cards
+    - Endgame technologies now require all K2 tech cards and all addon planet tech cards
       - Can be toggled via the new "Endgame techs require all installed planet tech cards" setting (default on)
   Changes:
     - Removed the "Endgame techs require galvanization tech card" setting as it is now superseded by the above feature
