@@ -61,8 +61,11 @@ if mods['apia'] then
     --     More solar power (but not too much to outshadow the Advanced Solar Panel per square)
     --     Drastically nerfing pollution absorbtion to not make it completely broken & outshine air purifiers
     --      (it absorbs pollution at the same strength of 2000 trees...)
+    -- Also weight & stack size standardisation
     if settings.startup['xy-apia-biosolar-rebalance'].value then
         data.raw['solar-panel']['bio-solar-panel'].emissions_per_second = { pollution = -0.2 }
         data.raw['solar-panel']['bio-solar-panel'].production = '120kW'
+        data.raw['item']['bio-solar-panel'].weight = 40000
+        data.raw['item']['bio-solar-panel'].stack_size = 50
     end
 end
