@@ -104,7 +104,7 @@ if mods['pelagos'] then
 end
 
 if mods['apia'] then
-    data.raw.item['xy-apicultural-research-data'].spoil_ticks = 81000
+    data.raw.item['xy-apicultural-research-data'].spoil_ticks = 54000
     data.raw.item['xy-apicultural-research-data'].spoil_result = 'spoilage'
     data.raw.tool['apicultural-science-pack'].spoil_result = 'kr-blank-tech-card'
 end
