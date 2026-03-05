@@ -14,7 +14,6 @@ if mods['planet-muluna'] and mods['Moshine'] then
     -- Rework "Solar panel from silicon cell" recipe to be more effective instead of just being the same thing but with aluminum
     -- 5 silicon replaced with 1 silicon cell, steel plate replaced with aluminum electronic circuit requirement removed,
     -- Crafting time and most inputs 3x, but output 4x
-    data.raw['recipe']['muluna-silicon-solar-panel'].enabled = true
     data.raw['recipe']['muluna-silicon-solar-panel'].energy_required = 30
     data.raw['recipe']['muluna-silicon-solar-panel'].ingredients = {
         {type = 'item', name = 'silicon-cell', amount = 4},
