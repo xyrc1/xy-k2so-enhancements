@@ -26,6 +26,7 @@ All settings in this category can be enabled or disabled in the mod settings!
 - Processing unit alternative recipe rebalance
   - Cerys' processing unit from nitric acid ratios changed and is locked to Cerys
   - Paracelsin's processing unit from nitric acid changed; notably requires one less advanced circuit
+- Endgame technologies now require all K2 tech cards and all addon planet tech cards.
 - (Default off) Starting after the first four vanilla planets, all non-upgrade techs begin to use signifcantly more tech cards to complete, increasing later in the game. This is supposed to make the player use the tools K2, Space Age, and other mods add in order to build a "kilobase". The multiplier can be further adjusted in mod settings. **It is highly recommended to enable this setting**
 - Reorganizes tech cards and research data from K2 and other mods into a more digestable format if [Science group](https://mods.factorio.com/mod/science-tab) is installed
 - (Default off) Spidertron recipe requires raw fish again
@@ -38,7 +39,6 @@ All settings in this category can be enabled or disabled in the mod settings!
 ### Moshine
 - Extends the distance from Vulcanus and Nauvis to Moshine to 10000 km and 25000 km respectively.
 ### Paracelsin
-- Galvanization tech card replacement can be toggled in settings
 - Rebalance K2's advanced chemical plant and Paracelsin's electrochemical plant
   - Adv. chemical plants are slightly cheaper overall to craft, crafting speed and bonus productivity halved (to 4x and +25%), energy usage slightly reduced, 10 can be shipped per rocket instead of 5
   - Electrochemical plants have quadruple the crafting speed and bonus productivity (to 8x and +50%), energy usage increased
