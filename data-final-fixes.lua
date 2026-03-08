@@ -10,6 +10,7 @@ require('patches.item_weight')
 require('patches.entity')
 require('patches.technology')
 require('patches.quality')
+require('patches.recipe')
 
 -- updates; overrides over other mods
 
