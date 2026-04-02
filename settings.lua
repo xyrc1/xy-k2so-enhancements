@@ -71,17 +71,6 @@ data:extend({
     --- Paracelsin
     {
         type = 'bool-setting',
-        name = 'xy-paracelsin-tech-card-endgame',
-        setting_type = 'startup',
-        default_value = true,
-
-        order = 'parac-a',
-
-        localised_name = {'mod-setting-name.xy-paracelsin-tech-card-endgame'},
-        localised_description = {'mod-setting-description.xy-paracelsin-tech-card-endgame'},
-    },
-    {
-        type = 'bool-setting',
         name = 'xy-adv-chem-plant-rebalance',
         setting_type = 'startup',
         default_value = true,
@@ -126,6 +115,17 @@ data:extend({
         localised_description = {'mod-setting-description.xy-secretas-polish'},
     },
     --- General - Technology ---
+    {
+        type = 'bool-setting',
+        name = 'xy-endgame-requires-all-cards',
+        setting_type = 'startup',
+        default_value = true,
+
+        order = 'x-a-tech-00',
+
+        localised_name = {'mod-setting-name.xy-endgame-requires-all-cards'},
+        localised_description = {'mod-setting-description.xy-endgame-requires-all-cards'},
+    },
     {
         type = 'bool-setting',
         name = 'xy-tech-inflation',

@@ -19,14 +19,6 @@ end
 
 --- Tech card replacements
 if settings.startup['xy-paracelsin-tech-card'].value and mods['Paracelsin'] then
-    if settings.startup['xy-paracelsin-tech-card-endgame'].value then
-        table.insert(t['kr-singularity-lab'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-antimatter-ammo'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-antimatter-reactor'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-antimatter-reactor-equipment'].unit.ingredients, {'galvanization-science-pack', 1})
-        table.insert(t['kr-intergalactic-transceiver'].unit.ingredients, {'galvanization-science-pack', 1})
-    end
-
     if settings.startup['xy-lab-recipe-changes'].value and mods['planet-muluna'] then
         table.insert(t['cryolab'].unit.ingredients, {'galvanization-science-pack', 1})
     end
@@ -118,6 +110,91 @@ if mods['workshop-science'] then
         ::continueWorkshop::
     end
 end
+----- Endgame techs require all installed planet tech cards -----
+if settings.startup['xy-endgame-requires-all-cards'].value then
+    local tech_cards_list = require('fixes.tech_cards_list')
+    local installed_cards = {}
+    local card_prereq_techs = {}
+    for _, card_data in pairs(tech_cards_list) do
+        if mods[card_data.mod] and card_data.setting and not card_data.basic_card then
+            table.insert(installed_cards, card_data.original_name)
+            table.insert(card_prereq_techs, card_data.tech_name or card_data.original_name)
+        end
+    end
+    table.insert(installed_cards, 'kr-advanced-tech-card')
+    table.insert(installed_cards, 'kr-matter-tech-card')
+    table.insert(installed_cards, 'kr-singularity-tech-card')
+    table.insert(card_prereq_techs, 'kr-advanced-tech-card')
+    table.insert(card_prereq_techs, 'kr-matter-tech-card')
+    table.insert(card_prereq_techs, 'kr-singularity-tech-card')
+    if mods['planet-muluna'] then
+        table.insert(installed_cards, 'interstellar-science-pack')
+        table.insert(card_prereq_techs, 'interstellar-science-pack')
+    end
+    if mods['maraxsis'] then
+        table.insert(installed_cards, 'hydraulic-science-pack')
+        table.insert(card_prereq_techs, 'hydraulic-science-pack')
+    end
+
+    -- Add all installed cards and prerequisites to the promethium-science-pack technology
+    local promethium_tech = t['promethium-science-pack']
+    if promethium_tech and promethium_tech.unit then
+        for _, card_name in pairs(installed_cards) do
+            if card_name ~= 'promethium-science-pack' then
+                local already_has = false
+                for _, ingredient in pairs(promethium_tech.unit.ingredients) do
+                    if ingredient[1] == card_name then
+                        already_has = true
+                        break
+                    end
+                end
+                if not already_has then
+                    table.insert(promethium_tech.unit.ingredients, {card_name, 1})
+                end
+            end
+        end
+        for _, prereq_tech in pairs(card_prereq_techs) do
+            local already_preq = false
+            for _, existing in pairs(promethium_tech.prerequisites or {}) do
+                if existing == prereq_tech then
+                    already_preq = true
+                    break
+                end
+            end
+            if not already_preq then
+                add_preqs('promethium-science-pack', {prereq_tech})
+            end
+        end
+    end
+
+    -- Add all installed cards as ingredients to every other promethium-tier tech
+    for _, tech in pairs(t) do
+        if not tech.unit then goto continueEndgame end
+        local has_promethium = false
+        for _, ingredient in pairs(tech.unit.ingredients) do
+            if ingredient[1] == 'promethium-science-pack' then
+                has_promethium = true
+                break
+            end
+        end
+        if has_promethium then
+            for _, card_name in pairs(installed_cards) do
+                local already_has = false
+                for _, ingredient in pairs(tech.unit.ingredients) do
+                    if ingredient[1] == card_name then
+                        already_has = true
+                        break
+                    end
+                end
+                if not already_has then
+                    table.insert(tech.unit.ingredients, {card_name, 1})
+                end
+            end
+        end
+        ::continueEndgame::
+    end
+end
+
 ----- MLE Tech Scaling -----
 if settings.startup['xy-tech-inflation'].value then
     -- increase the cost of all mid-late-endgame techs, starting after the first three vanilla planets
