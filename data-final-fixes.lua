@@ -15,3 +15,4 @@ require('patches.quality')
 
 require('updates.outer-rim-final')
 require('updates.planetaris')
+require('updates.apia')
